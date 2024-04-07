@@ -11,10 +11,41 @@
 
 
 <body class="body">
-    <script src="./js/TimeDate.js"></script>
 
 
-    <div>hola</div>
+
+    <section id="TimeDate" class="TimeDate">
+        <script src="./js/TimeDate.js"></script>
+
+        <div class="frase" id="frase">frase</div>
+        <div class="fecha" id="fecha">fecha</div>
+        <div class="reloj">
+            <span id="hora">hora</span>
+            <span>:</span>
+            <span id="minutos">minutos</span>
+            <span>:</span>
+            <span id="segundos">segundos</span>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="Password" class="Password">
+        <script src="./js/Password.js"></script>
+
+        <p>Crea tu contraseña segura </p>
+
+        <div class="containerPassword">
+            <p id="prueba">Número caractéres contraseña</p>
+            <input type="number" id="boxCaracteres" class="boxCaracteres">
+            <input type="button" id="botonPassword " class="botonPassword" value="Generar contraseña">
+
+        </div>
+
+    </section>
+
 </body>
 
 </html>
