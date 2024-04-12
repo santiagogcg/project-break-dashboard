@@ -10,12 +10,12 @@
 
 
 
-<body class="body">
+<body class="body" id="body">
 
 
 
     <section id="TimeDate" class="TimeDate">
-        <script src="./js/TimeDate.js"></script>
+
 
         <div class="frase" id="frase">frase</div>
         <div class="fecha" id="fecha">fecha</div>
@@ -31,21 +31,51 @@
 
 
 
-
     <section id="Password" class="Password">
-        <script src="./js/Password.js"></script>
+
 
         <p>Crea tu contraseña segura </p>
 
         <div class="containerPassword">
             <p id="prueba">Número caractéres contraseña</p>
-            <input type="number" id="boxCaracteres" class="boxCaracteres">
-            <input type="button" id="botonPassword " class="botonPassword" value="Generar contraseña">
+            <input type="number" id="boxCaracteres" class="boxCaracteres" value="">
+
+
+            <button id="botonPassword" class="botonPassword">Generar contraseña</button>
+
+            <p>Tu contraseña generada es:</p>
+            <p id="contraseñaGenerada"></p>
+
 
         </div>
 
+
+
+
     </section>
 
+
+    <section id="links" class="links">
+
+        <div>Añade tu enlace de interés</div>
+
+        <input type="text" id="title" class="title">
+        <input type="link" id="link" class="link">
+        <button id="botonLink" class="botonLink">Añadir link</button>
+
+        <ul id="lista" class="lista">
+
+        </ul>
+
+
+
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+
+
 </body>
+
+
 
 </html>

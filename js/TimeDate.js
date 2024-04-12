@@ -1,7 +1,7 @@
 
 
 
-function clock() {
+export function clock() {
 
     const fecha = document.getElementById("fecha")
     const hora = document.getElementById("hora")
@@ -15,7 +15,7 @@ function clock() {
         , "Miércoles", "Jueves", "Viernes", "Sábado"];
 
 
-    hoy = new Date();
+    let hoy = new Date();
 
     var h = hoy.getHours()
     var m = hoy.getMinutes()
@@ -25,7 +25,7 @@ function clock() {
     m = m < 10 ? `0${m}` : `${m}`;
     s = s < 10 ? `0${s}` : `${s}`;
 
-    SumHrMin = Number(h + m);
+    let SumHrMin = Number(h + m);
 
 
     if (SumHrMin >= 701 && SumHrMin <= 1200) {
