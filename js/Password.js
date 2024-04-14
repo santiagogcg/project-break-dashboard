@@ -60,6 +60,7 @@ export function imprimirContraseña() {
 
     botonPassword.addEventListener("click", function () {
 
+
         if (NoCaracteres >= 12 && NoCaracteres <= 50) {
             generarContraseña(NoCaracteres)
         } else {

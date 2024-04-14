@@ -1,42 +1,36 @@
 
+export function getlocalStorage(links, linksJSON, lista) {
 
-const botonLink = document.getElementById("botonLink")
-const title = document.getElementById("title").value
-const link = document.getElementById("link").value
-const lista = document.getElementById("lista")
+    links.forEach((link) => {
 
+        const li = document.createElement('li');
 
-const linksJSON = localStorage.getItem("links")
-const links = linksJSON ? JSON.parse(linksJSON) : []
-
-// export function getlocalStorage() {
-
-//     links.forEach(link => {
-//         const li2 = document.createElement('li');
-//         li2.innerText = link;
-//         lista.appendChild(li2);
-//     });
+        lista.appendChild(li);
+        li.innerText = link;
 
 
-botonLink.addEventListener("click", generarLinkDOM)
+
+    })
+}
 
 
-export function generarLinkDOM() {
+export async function generarLinkDOM(links, title, lista, linksJSON) {
 
+    const reload = await window.location.reload()
 
     const li = document.createElement("li");
 
 
-    // links.push(title);
+    links.push(title);
+
+    linksJSON = JSON.stringify(links)
+
+    localStorage.setItem('links', linksJSON)
+
     lista.appendChild(li)
     li.innerHTML = title
-    links.push(title)
 
 
-
-
-    // const linksJSON = JSON.stringify(links)
-    localStorage.setItem('links', links)
 
 }
 
@@ -45,7 +39,5 @@ export function generarLinkDOM() {
 
 
 
-console.log(title)
-generarLinkDOM()
 
 
